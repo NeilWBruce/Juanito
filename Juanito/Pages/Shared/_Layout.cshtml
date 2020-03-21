@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 
-
+   
 </head>
 <body>
     <div class="container-fluid">
@@ -20,9 +20,7 @@
             </div>
         </main>
 
-        <audio id="juanitoAudio">
-            <source src="~/juanito.mp3" />
-        </audio>
+      
     </div>
 
     <footer class="border-top footer text-muted">
@@ -39,24 +37,21 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function () {
-
-            var storageName = "juanito_clicks";
-            var clicks = localStorage.getItem(storageName);
+        function setCounter(storageName, clicksName) {
+             var clicks = localStorage.getItem(storageName);
 
             if (!clicks) {
                 clicks = 0;
             }
             var zeroFilled = ('000' + clicks).substr(-3)
-            $('#clicks').html(zeroFilled);
-        });
+            $('#' + clicksName).html(zeroFilled);
+        }
 
-        function playMusic() {
+        function playMusic(storageName, idName) {
 
-            var music = document.getElementById("juanitoAudio");
+            var music = document.getElementById(idName);
 
             if (music.paused) {
-                var storageName = "juanito_clicks";
                 var clicks = localStorage.getItem(storageName);
 
                 if (!clicks) {

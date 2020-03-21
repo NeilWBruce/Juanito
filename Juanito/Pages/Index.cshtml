@@ -5,9 +5,29 @@
 }
 
 
+@section Scripts {
+<script>
+
+    $(document).ready(function () {
+        var storageName = "juanito_clicks";
+        setCounter(storageName, "clicks");           
+    });
+
+    function playJuanito() {
+        playMusic("juanito_clicks", "juanito_audio");
+    }   
+</script>
+
+    
+}
+
 <div class="text-center">
     <h1>Juanito Button</h1>
-    <a href="#" class="btn" onmousedown="playMusic()">Press!</a>
+    <a href="#" class="btn" onmousedown="playJuanito()">Press!</a>
 
     <h2 id="clicks">000</h2>
+
+    <audio id="juanito_audio">
+        <source src="~/juanito.mp3" />
+    </audio>
 </div>
