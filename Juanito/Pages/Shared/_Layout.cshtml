@@ -3,24 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Juanito</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-   
+    <script src="https://kit.fontawesome.com/d06625a81c.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
     <div class="container-fluid">
         <div class="left-shape"></div>
         <div class="left-shape-2"></div>
+        <div class="float-right" style="margin-right:1em">
+            <a class="btn btn-primary -right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <span class="fas fa-cog"></span>
+            </a>
+        </div>
+        <div class="collapse float-right" id="collapseExample">
+            <div class="card card-body" style="width:400px">
+                <label class="label" for="volRange">Volumn</label>
+                <div class="d-flex justify-content-center">
+                    <div class="flex-grow-1">
+                        <input id="volRange" class="form-control" onchange="setVolText(this.value);" type="range" min="0" max="10" />
+                    </div>
+                    <div>
+                        <p class="label" id="volRangeText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <main role="main" class="pb-3">
             <div class="main-text">
                 @RenderBody()
             </div>
         </main>
 
-      
+
     </div>
 
     <footer class="border-top footer text-muted">
@@ -34,44 +57,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
-
-    <script type="text/javascript">
-
-        function setCounter(storageName, clicksName) {
-             var clicks = localStorage.getItem(storageName);
-
-            if (!clicks) {
-                clicks = 0;
-            }
-            var zeroFilled = ('000' + clicks).substr(-3)
-            $('#' + clicksName).html(zeroFilled);
-        }
-
-        function playMusic(storageName, idName) {
-
-            var music = document.getElementById(idName);
-
-            if (music.paused) {
-                var clicks = localStorage.getItem(storageName);
-
-                if (!clicks) {
-                    clicks = 0;
-                }
-                else {
-                    clicks = parseInt(clicks);
-                }
-
-                clicks = clicks + 1;
-
-                localStorage.setItem(storageName, clicks);
-
-                var zeroFilled = ('000' + clicks).substr(-3)
-                $('#clicks').html(zeroFilled);
-
-                music.play();
-            }
-        }
-    </script>
 
 
 </body>

@@ -1,33 +1,46 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Juanito Button";
 }
 
 
 @section Scripts {
-<script>
-
-    $(document).ready(function () {
-        var storageName = "juanito_clicks";
-        setCounter(storageName, "clicks");           
-    });
-
-    function playJuanito() {
-        playMusic("juanito_clicks", "juanito_audio");
-    }   
-</script>
-
-    
+    <script src="~/js/index.js" asp-append-version="true"></script>
 }
 
 <div class="text-center">
-    <h1>Juanito Button</h1>
-    <a href="#" class="btn" onmousedown="playJuanito()">Press!</a>
+    <div class="d-flex juanito">
+        <div>
+            <h1>Juanito Button</h1>
+        </div>
+        <div class="ml-5">
+            <a href="#" class="btn-main" onmousedown="playJuanito()">Press!</a>
+        </div>
+        <div class="align-self-baseline ml-4">
+            <h2 id="juan-clicks">000</h2>
+        </div>
+    </div>
+    <br />
+    <div class="d-flex partridge">
+        <div>
+            <h1>Partridge Button</h1>
+        </div>
+        <div class="ml-5">
+            <a href="#" class="btn-main" onmousedown="playPartridge()">Press!</a>
+        </div>
+        <div class="align-self-baseline ml-4">
+            <h2 id="partridge-clicks">000</h2>
+        </div>
+    </div>
 
-    <h2 id="clicks">000</h2>
 
-    <audio id="juanito_audio">
+
+    <audio id="juanito_audio" class="audio">
         <source src="~/juanito.mp3" />
+    </audio>
+
+    <audio id="partridge_audio" class="audio-loud">
+        <source src="~/partridge.mp3" />
     </audio>
 </div>
