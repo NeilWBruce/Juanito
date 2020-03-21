@@ -1,0 +1,79 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #333333;
+    color: #EAECEC;
+    overflow: hidden;
+    font-family: 'Bangers', cursive;
+}
+
+.left-shape {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vh 100vh 30vw;
+    border-color: transparent transparent transparent #FF6755;
+}
+
+.left-shape-2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -70vh;
+    border-width: 100vh 50vh 0 50vw;
+    border-color: transparent transparent transparent #FF6755;
+}
+
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.main-text {
+    position:absolute;
+    left:40vw;
+    top:30vh;
+}
+
+h1 {
+    font-size: 10vh;
+    text-decoration: none;
+    color: #FF6755
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #FF6755;
+    color: #FFF;
+    font-size:1.2em;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: .4s;
+}
+
+    .btn:hover {
+        background: #668ad8;
+    }
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
