@@ -7,7 +7,7 @@ mainApp.controller("IndexController", function IndexController($scope, $timeout)
     vm.volStorageName = "sound-vol"; 
     vm.activeAudio = false;
     vm.clicks = {};
-    vm.sounds = ["juanito", "partridge", "ram", "keegan", "win", "sad", "trophy", "cena", "christian"];
+    vm.sounds = ["juanito", "partridge", "ram", "keegan", "win", "sad", "trophy", "cena", "christian", "glorious"];
     vm.colors = ["#ff1dce", "#DCD9D4", "#00BF57", "#0982d0", "#FF0000", "#ffcc00", "#ff1dce", "#DCD9D4", "#00BF57", "#0982d0", "#FF0000", "#ffcc00"];
 
     vm.playMusic = function (name) {
