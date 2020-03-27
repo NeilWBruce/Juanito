@@ -10,33 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/d06625a81c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.js" crossorigin="anonymous"></script>
+    
 
 
 </head>
-<body>
+<body ng-app="finnApp">
     <div class="container-fluid">
-        <div class="left-shape"></div>
-        <div class="left-shape-2"></div>
-        <div class="float-right" style="margin-right:1em">
-            <a class="btn btn-primary -right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <span class="fas fa-cog"></span>
-            </a>
-        </div>
-        <div class="collapse float-right" id="collapseExample">
-            <div class="card card-body" style="width:400px">
-                <label class="label" for="volRange">Volumn</label>
-                <div class="d-flex justify-content-center">
-                    <div class="flex-grow-1">
-                        <input id="volRange" class="form-control" onchange="setVolText(this.value);" type="range" min="0" max="10" />
-                    </div>
-                    <div>
-                        <p class="label" id="volRangeText"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
         <main role="main" class="pb-3">
             <div class="main-text">
                 @RenderBody()

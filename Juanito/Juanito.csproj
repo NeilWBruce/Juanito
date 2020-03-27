@@ -8,6 +8,10 @@
     <None Include="wwwroot\juanito.mp3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\image\" />
+  </ItemGroup>
+
 
 
 </Project>

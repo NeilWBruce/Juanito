@@ -1,8 +1,8 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -11,19 +11,35 @@ body {
     background-color: #333333;
     color: #EAECEC;
     font-family: 'Bangers', cursive;
-    height:100vh;
-    width:100vw;
+    height: 100vh;
+    width: 100vw;
+    overflow:hidden;
 }
 
-.juanito {
-    color: #FF6755;
+.bottom-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
-    .juanito .btn-main {
-        background-color: #FF6755;
+.red-button {
+    background-color: #FF6755;
+}
+
+    .red-button .btn-main:hover {
+        color: #668ad8;
     }
 
-        .juanito .btn-main:hover {
+.ram {
+    color: #FFF;
+}
+
+    .ram .btn-main {
+        color: #668ad8;
+        background-color: #FFF;
+    }
+
+        .ram .btn-main:hover {
             color: #668ad8;
         }
 
@@ -40,41 +56,10 @@ body {
             color: #FF6755;
         }
 
-.left-shape {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 100vh 100vh 30vw;
-    border-color: transparent transparent transparent #FF6755;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:-20;
-}
-
-.left-shape-2 {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -70vh;
-    border-width: 100vh 50vh 0 50vw;
-    border-color: transparent transparent transparent #FF6755;
-    position: absolute;
-    top: 70vh;
-    left: 0;
-    z-index:-20;
-}
-
 
 .container-fluid {
     padding: 0;
     margin: 0;
-}
-
-.main-text {
-    position:absolute;
-    left:35vw;
-    top:10vh;
 }
 
 h1 {
@@ -86,7 +71,7 @@ h1 {
     display: inline-block;
     text-decoration: none;
     color: #FFF;
-    font-size:5vh;
+    font-size: 3vh;
     width: 15vh;
     height: 15vh;
     line-height: 15vh;
@@ -97,16 +82,17 @@ h1 {
     transition: .4s;
 }
 
-   
-
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
+.small-button {
+    width: 94px;
+    height: 89px;
+    border-radius: 50%;
+    content: url(../image/button_pressed.png) url(../image/button.png);
+    background: url(../image/button.png) no-repeat;
 }
+
+    .small-button:active {
+        background: url(../image/button_pressed.png) no-repeat;
+    }
 
 .label {
     color: #333333;
